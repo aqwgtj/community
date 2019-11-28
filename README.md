@@ -17,3 +17,20 @@
 
 [Visual Paradigm](https://www.visual-paradigm.com/cn/)
 
+## 脚本
+```sql
+create table USER
+(
+	ID INTEGER default (NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_F7D4F462_5BEF_4C7C_83A2_1ED30A591D79) auto_increment,
+	ACCOUNT_ID VARCHAR(100),
+	NAME VARCHAR(50),
+	TOKEN CHAR(36),
+	GMT_CREATE BIGINT,
+	GMT_MODIFIED BIGINT,
+	constraint USER_PK
+		primary key (ID)
+);
+
+
+```
+
