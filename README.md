@@ -19,18 +19,21 @@
 
 ## 脚本
 ```sql
-create table USER
+create table user
 (
-	ID INTEGER default (NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_F7D4F462_5BEF_4C7C_83A2_1ED30A591D79) auto_increment,
-	ACCOUNT_ID VARCHAR(100),
-	NAME VARCHAR(50),
-	TOKEN CHAR(36),
-	GMT_CREATE BIGINT,
-	GMT_MODIFIED BIGINT,
-	constraint USER_PK
-		primary key (ID)
+  id int auto_increment primary key not null,
+  account_id varchar(100),
+  name varchar(50),
+  token varchar(36),
+  gmt_create bigint,
+  gmt_modified bigint
 );
 
+-- alter table USER add bio varchar(256) null;
+alter table user add bio varchar(256) null;
 
 ```
+
+##sql命令
+rm ~/community.*  删除数据库
 
