@@ -1,12 +1,16 @@
 package life.shinidie.community.dto;
 
+import lombok.Data;
+
+@Data
 public class GithubUser {
 
     private String name;
     private Long id;
     private String bio;
+    private String avatar_url;
 
-    public String getName() {
+/*    public String getName() {
         return name;
     }
 
@@ -37,5 +41,5 @@ public class GithubUser {
                 ", id=" + id +
                 ", bio='" + bio + '\'' +
                 '}';
-    }
+    }*/
 }

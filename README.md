@@ -11,6 +11,8 @@
 
 [Github OAuth](https://www.bilibili.com/video/av65117012?p=8)
 
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#parameterizable-fragment-signatures)
+
 
 ## 工具
 [git下载工具](https://git-scm.com/downloads)

@@ -1,8 +1,8 @@
-body{
+body {
     background-color: #efefef;
 }
 
-.main{
+.main {
     background-color: white;
     margin: 30px;
 }
@@ -10,4 +10,15 @@ body{
 .btn-publish {
     float: right;
     margin-bottom: 15px;
+}
+
+.media-object {
+    width: 48px;
+    height: 48px;
+}
+
+.text-desc {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
 }

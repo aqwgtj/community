@@ -1,5 +1,8 @@
 package life.shinidie.community.dto;
 
+import lombok.Data;
+
+@Data
 public class AccessTokenDTO {
 
     private String client_id;
@@ -8,7 +11,7 @@ public class AccessTokenDTO {
     private String redirect_uri;
     private String state;
 
-    public String getClient_id() {
+/*    public String getClient_id() {
         return client_id;
     }
 
@@ -46,5 +49,5 @@ public class AccessTokenDTO {
 
     public void setState(String state) {
         this.state = state;
-    }
+    }*/
 }
