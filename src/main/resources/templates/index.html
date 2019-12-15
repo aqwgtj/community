@@ -20,7 +20,7 @@
             <a class="navbar-brand" href="#">野爹社区</a>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">       f
             <form class="navbar-form navbar-left">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="搜索亲爹">
@@ -34,7 +34,7 @@
                 <li class="dropdown" th:if="${session.user != null}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false" th:text="${session.user.getName()}"> <span class="caret"></span></a>
-                    <ul class="dropdown-menu"> s
+                    <ul class="dropdown-menu"> 
                         <li><a href="#">消息中心</a></li>
                         <li><a href="#">野爹资料</a></li>
                         <li><a href="#">退出登录</a></li>
@@ -57,8 +57,9 @@
             <div class="media" th:each="question : ${questions}">
                 <div class="media-left">
                     <a href="#">
+                        <!--/*@thymesVar id="question" type=""*/-->
                         <img class="media-object img-rounded"
-                             th:src="${question.user.getAvatarUrl()}"
+                             th:src="${question.user.avatarUrl}"
                              style="width: 48px;height: 48px;">
                         <!--src="http://ws3.sinaimg.cn/large/9150e4e5ly1fcvufue0l3j20cm0a00t0.jpg"-->
 
@@ -66,9 +67,9 @@
                 </div>
                 <div class="media-body">
                     <h4 class="media-heading" th:text="${question.title}"></h4>
-                    <span th:text="question.description"></span><br>
+                    <span th:text="${question.description}"></span><br>
                     <span class="text-desc"><span th:text="${question.commentCount}"></span>个回复 • <span
-                            th:text="${question.viewCount}"></span> 次浏览 • 1 小时前</span>
+                            th:text="${question.viewCount}"></span> 次浏览 • <span th:text="${#dates.format(question.gmtCreate,'yyyy-MM-dd HH:mm')}"></span></span>
                 </div>
             </div>
         </div>
